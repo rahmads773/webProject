@@ -1,0 +1,129 @@
+/* start global rules */
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image:linear-gradient(110deg,#5e36e2,#63afe5);
+}
+/* end global rules */
+/* start components */
+.mybtn{
+    background-color: #00dba8 !important;
+    padding: 0.7rem 2rem !important;
+    border: 0 !important;
+}
+.mybtn:hover{
+border: 0 ;
+}
+.square-empty{
+    border: 2px solid rgba(255, 255, 255, 0.236);
+    width: 397px;
+    height: 230px;
+    position: absolute;
+    border-radius: 25px;
+    border-top-color: transparent;
+    transform: rotate(-12deg);
+    right: 215px;
+    top: -110px;
+}
+.square{
+    width: 397px;
+    height: 230px;
+    position: absolute;
+    border-radius: 25px;
+    border-top-color: transparent;
+    transform: rotate(-12deg);
+    right: 265px;
+    top: -126px;
+    background-color: rgba(255, 255, 255, 0.168);
+}
+/* end components */
+/* start header */
+header{
+    min-height: 100vh;
+    /* background-image:linear-gradient(110deg,#5e36e2,#63afe5); */
+}
+header .navbar .nav-item .nav-link{
+    position: relative;
+}
+header .navbar .nav-item .nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: .5s;
+}
+header .navbar .nav-item .nav-link:not(.login):hover::before{
+    width: 50%;
+}
+header .navbar-toggler{
+    border: 0!important;
+}
+header .navbar-toggler:focus{
+    box-shadow: none;
+}
+header nav .nav-item a{
+    font-size: 18px !important;
+}
+@media (max-width:992px) {
+    header nav .nav-item.btn-con{
+        width: 100%;
+    }
+}
+header nav .nav-item a.login{
+    color: #63afe5 ;
+    padding: 0.6rem 2.5rem !important;
+    font-size: 16px !important;
+}
+header .landing{
+ padding: 8rem 0;
+}
+/* end header */
+/* start features */
+.features{
+    position: relative;
+    z-index: 1;
+}
+.features .square{
+    left: 0;
+    top: 93px;
+}
+.features .square-empty{
+    transform: rotate(168deg);
+    left: -50px;
+    top: 74px;
+    height: 290px;
+}
+.features::before{
+    content: "";
+    position: absolute;
+    background-color: #fafbfe;
+    width: 100%;
+    height: 75%;
+    left: 0;
+    bottom: -90px;
+    z-index: -1;
+    transform: skewY(-7deg);
+}
+.features h2{
+    margin-bottom: 100px;
+}
+.features .feat{
+    background-color: white;
+    height: 420px;
+    box-shadow: 0 0 40px #0000003b;
+}
+.features .feat h4{
+    font-size: 20px;
+}
+.features .feat p{
+    font-size: 14px;
+}
+
+/* end features */
